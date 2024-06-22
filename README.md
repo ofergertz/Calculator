@@ -1,2 +1,3 @@
 # Calculator
-Calculator with basic operation
+Calculator with basic operations
+using blazor tech
