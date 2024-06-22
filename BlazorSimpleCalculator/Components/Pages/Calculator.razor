@@ -1,0 +1,29 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using Model.Calculators
+@using MudBlazor
+@inject ICalculatorService CalculatorService
+
+<MudPaper Class="pa-4 mx-auto" MaxWidth="400px">
+    <MudText Typo="Typo.h4" Align="Align.Center">Calculator</MudText>
+    <MudGrid>
+        <MudItem xs="12">
+            <MudText Typo="Typo.h5" Align="Align.Right">@CalculatorService.Calculator?.FullExpression</MudText>
+        </MudItem>
+        <MudItem xs="12">
+                <MudText Typo="Typo.h4" Align="Align.Right">@CalculatorService.Calculator?.Display</MudText>
+        </MudItem>
+            @foreach (var button in CalculatorService.Calculator?.Buttons)
+        {
+            <MudItem xs="3">
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="() => CalculatorService.ProcessInput(button)">
+                    @button
+                </MudButton>
+            </MudItem>
+        }
+    </MudGrid>
+    <MudButton Class="mt-2" Variant="Variant.Filled" Color="Color.Secondary" OnClick="@CalculatorService.Clear">
+        Clear
+    </MudButton>
+</MudPaper>
+

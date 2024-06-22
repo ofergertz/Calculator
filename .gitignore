@@ -1,6 +1,40 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Folders
+.vs/
+.vscode/
+lib/
+Libs/
+LibsLocal/
+Package/
+Packages/
+Output/
+obj/
+bin/
+Debug/
 
-/Model/obj/Debug/net8.0/refint/Model.dll
-/Model/bin/Debug/net8.0
+
+# File Type
+*.dll
+*.log
+*.vspscc
+*.vssscc
+*.user
+*.pdb
+*.exe
+*.ldf
+*.mdf
+*.suo
+*.hdr
+*.htm
+*.bak
+*.vsmdi
+*.zip
+*.rar
+*.7z
+
+# Files 
+NuGet.Config
+
+
+
+test*.txt
+*.nupkg
